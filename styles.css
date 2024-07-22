@@ -1,0 +1,110 @@
+/* Apply box-sizing, reset margins and paddings, and set default font properties */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Styles for the main container */
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Assests/Bg-Gradient.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+/* Styles for displaying game information */
+.game-info {
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+}
+
+/* Styles for the Tic-Tac-Toe game board */
+.tic-tac-toe {
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+}
+
+/* Styles for each cell in the game board */
+.box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Border styles for the game board cells */
+.box-1,
+.box-2,
+.box-4,
+.box-5 {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box-3,
+.box-6 {
+    border-bottom: 2px solid white;
+}
+
+.box-7,
+.box-8 {
+    border-right: 2px solid white;
+}
+
+/* Styles for the New Game button */
+.btn {
+    color: white;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Styles for showing the button when active */
+.active {
+    display: flex;
+}
+
+/* Styles for highlighting winning cells */
+.win {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+```
